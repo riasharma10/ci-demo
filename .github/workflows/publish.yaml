@@ -2,18 +2,12 @@ name: Lint and Publish
 on: push
 jobs:
   install: 
-    name: Install Packages
+    name: Install Packages and Run Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
           npm install
-  lint:
-    name: Run lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
           npm run lint
 
 
